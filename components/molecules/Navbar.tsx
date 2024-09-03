@@ -1,8 +1,14 @@
 import React from 'react'
+import Logo from '../atoms/Logo';
 
 const Navbar = () => {
+
+  const navList = ["Galeria zdjęć", "FaQ",];
+
   return (
-    <div>Navbar</div>
+    <>
+    <Logo />
+    </>
   )
 }
 

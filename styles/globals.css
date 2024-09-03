@@ -4,7 +4,14 @@
 
 @layer base {
   :root {
+    --text-first: #000000;
+    --text-second: #0147ff;
     --main-background: #f7f7f7;
-    --seo-background: #282828;
+    --footer-background: #282828;
   }
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../public/fonts/Heebo/Heebo-VariableFont_wght.ttf") format("woff2");
 }
