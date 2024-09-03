@@ -4,11 +4,21 @@
 
 @layer base {
   :root {
-    --text-first: #000000;
-    --text-second: #0147ff;
-    --main-background: #f7f7f7;
-    --footer-background: #282828;
+    --first-black: #000000;
+    --second-blue: #0147ff;
+    --third-white: #f7f7f7;
+    --fourth-black: #282828;
   }
+
+  body {
+    font-family: "Roboto Flex", sans-serif;
+  }
+}
+
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("../public/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf")
+    format("woff2");
 }
 
 @font-face {
