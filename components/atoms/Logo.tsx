@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../../public/images/Logo.png";
+import Link from "next/link";
 //import { RxLightningBolt } from "react-icons/rx";
 
 const Logo = () => {
@@ -12,7 +13,9 @@ const Logo = () => {
     //   </div>
     // </div>
     <div>
-      <Image src={logo} alt="navbar logo" width={152.79} height={32.61} />
+      <Link href="/">
+        <Image src={logo} alt="navbar logo" width={152.79} height={32.61} />
+      </Link>
     </div>
   );
 };

@@ -28,7 +28,7 @@ const Hero = () => {
             objectFit: "cover",
             zIndex: -1,
             right: 0,
-            top: 328,
+            top: 407,
           }}
         />
         <Image
@@ -39,7 +39,7 @@ const Hero = () => {
             objectFit: "cover",
             zIndex: -1,
             right: 0,
-            top: 328,
+            top: 407,
           }}
         />
     </>

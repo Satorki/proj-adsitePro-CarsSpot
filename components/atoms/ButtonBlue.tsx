@@ -6,7 +6,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ content }) => {
   return (
-    <button className="w-[158px] h-[47px] gap-[8px] rounded text-[var(--third-white)] bg-[var(--second-blue)] size-[15px]">
+    <button className="w-[158px] h-[47px] gap-[8px] rounded-lg text-[var(--third-white)] bg-[var(--second-blue)] size-[15px] hover:bg-blue-500">
       {content}
     </button>
   );

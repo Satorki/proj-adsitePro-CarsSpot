@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../atoms/Logo";
-import Button from "../atoms/Button";
+import Button from "../atoms/ButtonBlue";
+import Link from "next/link";
 
 const Navbar = () => {
   const navList = ["Galeria zdjęć", "FaQ"];
@@ -12,7 +13,9 @@ const Navbar = () => {
         <nav>
           <ul className="flex gap-[24px] text-base">
             {navList.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index}>
+                <Link href="/#" className="hover:opacity-50">{item}</Link>
+              </li>
             ))}
           </ul>
         </nav>
