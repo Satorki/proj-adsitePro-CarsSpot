@@ -20,8 +20,17 @@
   src: url("../public/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf")
     format("woff2");
 }
-
 @font-face {
+  font-family: "Bebas Neue";
+  src: url("../public/fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../public/fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf")
+    format("woff2");
+}
+
+/* @font-face {
   font-family: "Heebo";
   src: url("../public/fonts/Heebo/Heebo-VariableFont_wght.ttf") format("woff2");
-}
+} */

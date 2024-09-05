@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      heebo: ["Heebo", "sans-serif"],
+      bebasNeue: ["Bebas Neue", "cursive"],
+      robotoCondensed: ["Roboto Condensed", "sans-serif"],
+      robotoFlex: ["Roboto Flex", "sans-serif"],
     },
   },
   plugins: [],

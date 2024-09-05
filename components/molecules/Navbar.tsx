@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <div className="h-[79px] py-[16px]">
-      <div className="flex items-center w-[1200px] h-[47px] mx-auto justify-between">
+      <div className="flex items-center max-w-[1200px] h-[47px] mx-auto justify-between">
         <Logo />
         <nav>
           <ul className="flex gap-[24px] text-base">
