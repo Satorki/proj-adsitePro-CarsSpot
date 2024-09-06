@@ -4,10 +4,11 @@
 
 @layer base {
   :root {
-    --first-black: #000000;
-    --second-blue: #0147ff;
-    --third-white: #f7f7f7;
-    --fourth-black: #282828;
+    --textBlackP: #000000;
+    --textBlackH: #1D1D1B;
+    --mainBlack: #282828;
+    --mainBlue: #0147ff;
+    --backgroundWhite: #f7f7f7;
   }
 
   body {

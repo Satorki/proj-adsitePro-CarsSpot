@@ -3,7 +3,7 @@ import React from "react";
 
 const Gallery = () => {
   return (
-    <div>
+    <div className="bg-[var(--backgorundWhite)]">
       <Headers />
       <div className="h-[2118px] border ">Gallery</div>
     </div>

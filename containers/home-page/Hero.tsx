@@ -8,7 +8,7 @@ import Square from "@/components/atoms/Square";
 
 const Hero = () => {
   return (
-    <div className="h-[1000px]">
+    <div>
       <Image
         src={PatterImage}
         alt="pattern image"
@@ -20,7 +20,6 @@ const Hero = () => {
           objectFit: "cover",
         }}
       />
-      <div className="relative">
         <Square />
         <HeroText />
         <Image
@@ -32,7 +31,7 @@ const Hero = () => {
             position: "absolute",
             zIndex: -1,
             right: 0,
-            top: 328,
+            top: 407,
           }}
         />
         <Image
@@ -44,11 +43,10 @@ const Hero = () => {
             position: "absolute",
             zIndex: -1,
             right: 0,
-            top: 328,
+            top: 407,
           }}
         />
       </div>
-    </div>
   );
 };
 
