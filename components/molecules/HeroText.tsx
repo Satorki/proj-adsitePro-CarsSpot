@@ -3,7 +3,7 @@ import Button from "../atoms/ButtonBlue";
 
 const HeroText = () => {
   return (
-    <div className="flex flex-col mt-[120px] max-w-[1200px] mx-auto gap-12">
+    <div className="flex flex-col pt-[120px] pb-[362px] max-w-[1200px] mx-auto gap-12">
       <div>
         <h1 className="text-[76.29px] font-bebasNeue font-normal leading-[83.92px]">
           SPRZEDAJEMY SAMOCHODY <br /> Z EUROPY

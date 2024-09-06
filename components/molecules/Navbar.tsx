@@ -7,7 +7,7 @@ const Navbar = () => {
   const navList = ["Galeria zdjęć", "FaQ"];
 
   return (
-    <div className="h-[79px] py-[16px]">
+    <div className="h-[79px] py-4">
       <div className="flex items-center max-w-[1200px] h-[47px] mx-auto justify-between">
         <Logo />
         <nav>
