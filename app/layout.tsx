@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import Navbar from "../components/molecules/Navbar";
-import Footer from "../components/molecules/Footer";
+import Navbar from "../components/organisms/Navbar";
+import Footer from "../components/organisms/Footer";
 
 export const metadata: Metadata = {
   title: "Adsitepro - CarsSpot",

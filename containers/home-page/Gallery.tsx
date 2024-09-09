@@ -1,12 +1,12 @@
 import Headers from "@/components/molecules/Headers";
-import Slider from "@/components/organisms/Slider";
+import Slider from "@/components/molecules/Slider";
 import React from "react";
 
 const Gallery = () => {
   return (
-    <div className="bg-[var(--backgorundWhite)]">
+    <div>
       <Headers />
-      <div className="">
+      <div>
         <Slider />
       </div>
     </div>

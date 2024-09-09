@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,17 +10,29 @@ const Slider = () => {
   const photos = ["Photo2", "Photo1", "Photo3"];
 
   return (
-    <div className="ml-[88px] mt-20">
+    <div className="2xl:max-w-[1264px] xl:ml-[88px] mx-auto mt-20">
       <Swiper
-        spaceBetween={80}
-        slidesPerView={2.15}
         pagination={{
           dynamicBullets: false,
           clickable: true,
-          bulletClass: "swiper-pagination-bullet",
-          bulletActiveClass: "swiper-pagination-bullet-active",
-          renderBullet: (index, className) =>
-            `<span class="${className}"></span>`,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 60,
+          },
+          1400: {
+            slidesPerView: 2.15,
+            spaceBetween: 80,
+          },
+          1536: {
+            slidesPerView: 3,
+            spaceBetween: 80,
+          },
         }}
         modules={[Pagination]}
       >
@@ -29,9 +41,6 @@ const Slider = () => {
             <Photo photo={`/images/${photoName}.png`} />
           </SwiperSlide>
         ))}
-        <div className="">
-          <div className="swiper-pagination absolute top-10"></div>
-        </div>
       </Swiper>
     </div>
   );
