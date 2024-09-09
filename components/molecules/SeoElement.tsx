@@ -17,10 +17,12 @@ const SeoElement = ({ title, description, expand }: SeoElementProps) => {
       <p className="font-robotoCondensed text-[14px] leading-[21px]">
         {description}
       </p>
-      <button className="font-robotoCondensed text-[14px] leading-[21px] border-b pb-2 flex items-center gap-1">
-        {expand ? "Zwiń" : "Rozwiń"}
-        <Image src={ArrowDown} alt="arrow down" width={13} height={15} />
-      </button>
+      <div className="underline hover:underline-offset-4">
+        <button className=" font-robotoCondensed text-[14px] leading-[21px]  flex items-center gap-1">
+          {expand ? "Zwiń" : "Rozwiń"}
+          <Image src={ArrowDown} alt="arrow down" width={13} height={15} />
+        </button>
+      </div>
     </div>
   );
 };

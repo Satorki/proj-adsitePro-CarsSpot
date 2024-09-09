@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Headers = () => {
+const GalleryHeader = () => {
   return (
     <div className="h-[207px] bg-[var(--backgorundWhite)] max-w-[1264px] mx-auto flex items-end">
       <div className="flex flex-col gap-6 max-h-[127px] ">
@@ -19,7 +19,12 @@ const Headers = () => {
           </p>
         </div>
         <div className="flex gap-12">
-          <Link href={"/"}>Samochody osobowe</Link>
+          <Link
+            href={"/"}
+            className="text-[var(--mainBlue)] border-b border-b-[var(--mainBlue)]"
+          >
+            Samochody osobowe
+          </Link>
           <Link href={"/"}>Samochody dostawcze</Link>
         </div>
       </div>
@@ -27,4 +32,4 @@ const Headers = () => {
   );
 };
 
-export default Headers;
+export default GalleryHeader;
