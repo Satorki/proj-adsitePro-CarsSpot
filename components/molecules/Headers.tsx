@@ -3,8 +3,8 @@ import React from "react";
 
 const Headers = () => {
   return (
-    <div className="h-[207px] bg-[var(--backgorundWhite)] max-w-[1200px] mx-auto">
-      <div className="flex flex-col gap-6 max-w-[1264px] max-h-[127px] ">
+    <div className="h-[207px] bg-[var(--backgorundWhite)] max-w-[1264px] mx-auto flex items-end">
+      <div className="flex flex-col gap-6 max-h-[127px] ">
         <div>
           <p className="text-[var(--mainBlue)] font-robotoCondensed text-[21.5px] leading-[32.25px]">
             Prezentacja firmy
