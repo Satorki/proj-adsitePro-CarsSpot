@@ -7,8 +7,14 @@ interface Props {
 
 const Photo: React.FC<Props> = ({ photo }) => {
   return (
-    <div className="w-[600px] h-[446px]">
-      <Image src={photo} alt="photo" width={600} height={446} />
+    <div>
+      <Image
+        src={photo}
+        alt="photo"
+        width={600}
+        height={446}
+        style={{ objectFit: "cover" }}
+      />
     </div>
   );
 };

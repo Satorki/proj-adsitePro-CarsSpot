@@ -6,7 +6,7 @@ const Gallery = () => {
   return (
     <div className="bg-[var(--backgorundWhite)]">
       <Headers />
-      <div className="h-[678px]">
+      <div className="">
         <Slider />
       </div>
     </div>
