@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="flex items-center max-w-[var(--container-width)] h-[47px] mx-auto justify-between">
         <Logo />
         <nav>
-          <ul className="flex items-center justify-between gap-6 w-[144px] font-robotoFlex leading-6">
+          <ul className="text-[var(--mainBlack)] flex items-center justify-between gap-6 w-[144px] font-robotoFlex leading-6">
             {navList.map((item, index) => (
               <li key={index}>
                 <Link href="/#" className="hover:opacity-50">

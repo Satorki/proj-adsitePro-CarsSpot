@@ -1,6 +1,5 @@
 import React from "react";
-import ArrowDown from "../../public/images/arrowDown.png";
-import Image from "next/image";
+import ExpandButton from "../atoms/ExpandButton";
 
 interface SeoElementProps {
   title: string;
@@ -10,18 +9,15 @@ interface SeoElementProps {
 
 const SeoElement = ({ title, description, expand }: SeoElementProps) => {
   return (
-    <div className="flex flex-col items-start gap-4">
-      <h3 className="uppercase font-bebasNeue font-normal text-[25px] leading-[37.5px] tracking-tight text-white">
+    <div className="flex flex-col items-start gap-4 h-[185px]">
+      <h3 className="uppercase font-bebasNeue text-[25px] leading-[37.5px] tracking-[-0.03em] text-white">
         {title}
       </h3>
-      <p className="font-robotoCondensed text-[14px] leading-[21px]">
-        {description}
-      </p>
-      <div className="underline hover:underline-offset-4">
-        <button className=" font-robotoCondensed text-[14px] leading-[21px]  flex items-center gap-1">
-          {expand ? "Zwiń" : "Rozwiń"}
-          <Image src={ArrowDown} alt="arrow down" width={13} height={15} />
-        </button>
+      <div className="flex flex-col gap-6">
+        <p className="font-robotoCondensed text-[14px] leading-[21px]">
+          {description}
+        </p>
+        <ExpandButton expand={expand} />
       </div>
     </div>
   );

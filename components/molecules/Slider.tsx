@@ -17,7 +17,7 @@ const Slider = () => {
 
   const pagination = {
     clickable: true,
-    renderBullet: function (index, className) {
+    renderBullet: function (index: number, className: string) {
       return `<span class="${className} -translate-x-12 -translate-y-5"></span>`;
     },
   };
