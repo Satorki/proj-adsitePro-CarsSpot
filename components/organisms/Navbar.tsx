@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="h-[79px] py-4">
-      <div className="flex items-center max-w-[1200px] h-[47px] mx-auto justify-between">
+      <div className="flex items-center max-w-[var(--container-width)] h-[47px] mx-auto justify-between">
         <Logo />
         <nav>
           <ul className="flex items-center justify-between gap-6 w-[144px] font-robotoFlex leading-6">
