@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../atoms/ButtonBlue";
+import Button from "../atoms/Button";
 
 const HeroText = () => {
   return (
@@ -15,7 +15,9 @@ const HeroText = () => {
       </div>
       <div className="flex gap-6">
         <Button content="Zobacz zdjęcia" />
-        <button className="w-[158px] h-[47px] gap-[8px] rounded-lg text-[var(--mainBlue)] border-[var(--mainBlue)] border size-[15px] hover:bg-blue-200">Zadzwoń do nas</button>
+        <button className="w-[158px] h-[47px] gap-[8px] rounded-lg text-[var(--mainBlue)] border-[var(--mainBlue)] border size-[15px] hover:bg-blue-200">
+          Zadzwoń do nas
+        </button>
       </div>
     </div>
   );

@@ -4,6 +4,13 @@
 
 @layer base {
   :root {
+    /* SIZES */
+    --container-width: 1200px;
+    --buttons-radius: 6px;
+    --buttons-padding-tb: 12px;
+    --buttons-padding-lr: 24px;
+
+    /* COLORS */
     --textBlackP: #000000;
     --textBlackH: #1d1d1b;
     --mainBlack: #282828;
@@ -12,11 +19,11 @@
   }
 
   body {
-    font-family: "Roboto Flex", sans-serif;
     background-color: var(--backgroundWhite);
   }
 }
 
+/* FONTS */
 @font-face {
   font-family: "Roboto Flex";
   src: url("../public/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf")
@@ -31,8 +38,3 @@
   src: url("../public/fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf")
     format("woff2");
 }
-
-/* @font-face {
-  font-family: "Heebo";
-  src: url("../public/fonts/Heebo/Heebo-VariableFont_wght.ttf") format("woff2");
-} */
