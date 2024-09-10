@@ -7,13 +7,14 @@ interface Props {
 
 const Photo: React.FC<Props> = ({ photo }) => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Image
         src={photo}
         alt="photo"
         width={600}
         height={446}
         style={{ objectFit: "cover" }}
+        className="hover:scale-110 transform-gpu transition-all ease-in-out  duration-500 object-cover"
       />
     </div>
   );

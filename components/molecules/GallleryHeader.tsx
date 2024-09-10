@@ -3,8 +3,8 @@ import React from "react";
 
 const GalleryHeader = () => {
   return (
-    <div className="bg-[var(--backgorundWhite)] max-w-[1264px] mx-auto flex items-end">
-      <div className="mt-[80px] flex flex-col gap-6 max-h-[127px] w-[1264px] ">
+    <div className="md:max-w-[700px] lg:max-w-[960px] xl:max-w-[1264px] bg-[var(--backgorundWhite)] mx-auto flex items-end">
+      <div className="mt-[80px] flex flex-col gap-6 max-h-[127px] w-[1264px]">
         <div>
           <p className="text-[var(--mainBlue)] font-robotoCondensed text-[21.5px] leading-[32.25px]">
             Prezentacja firmy
@@ -27,7 +27,7 @@ const GalleryHeader = () => {
           </Link>
           <Link
             href={"/"}
-            className="font-robotoFlex text-[15px] leading-[22.5px] tracking-[-0.02em]"
+            className="hover:border-b hover:border-b-[var(--mainBlue)] hover:text-[var(--mainBlue)] font-robotoFlex text-[15px] leading-[22.5px] tracking-[-0.02em]"
           >
             Samochody dostawcze
           </Link>

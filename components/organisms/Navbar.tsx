@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="py-4">
-      <div className="flex items-center max-w-[var(--container-width)] mx-auto justify-between">
+      <div className="md:max-w-[700px] lg:max-w-[960px] xl:max-w-[var(--container-width)] flex items-center mx-auto justify-between">
         <Logo />
         <nav>
           <ul className="text-[var(--mainBlack)] flex items-center justify-between gap-6 font-robotoFlex leading-6">
@@ -21,7 +21,7 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
-        <div className="w-[300px] flex justify-end">
+        <div className="md:w-[150px] w-[300px] flex justify-end">
           <Button content="Zadzwoń do nas" />
         </div>
       </div>
