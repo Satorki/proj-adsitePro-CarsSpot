@@ -6,7 +6,7 @@ interface SeoBackgroundProps {
 
 const SeoBackground = ({ children }: SeoBackgroundProps) => {
   return (
-    <div className="bg-[var(--mainBlack)] text-[#ffffff] py-[88px] h-[361px]">
+    <div className="bg-[var(--mainBlack)] text-[#ffffff] py-[88px]">
       {children}
     </div>
   );

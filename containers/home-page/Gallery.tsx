@@ -1,11 +1,11 @@
-import Headers from "@/components/molecules/GallleryHeader";
+import GalleryHeader from "@/components/molecules/GallleryHeader";
 import Slider from "@/components/molecules/Slider";
 import React from "react";
 
 const Gallery = () => {
   return (
     <div>
-      <Headers />
+      <GalleryHeader />
       <div>
         <Slider />
       </div>
