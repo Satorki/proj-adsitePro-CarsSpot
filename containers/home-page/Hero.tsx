@@ -6,12 +6,12 @@ import HeroGroup from "../../public/images/hero-group.png";
 
 const Hero = () => {
   return (
-    <div className="">
+    <div>
       <Image
         src={HeroGroup}
         alt="hero group"
+        className="absolute"
         style={{
-          position: "absolute",
           top: 407,
           right: 0,
           zIndex: -1,

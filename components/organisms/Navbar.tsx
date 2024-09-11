@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="py-4 sticky top-0 z-10">
-      <div className="mx-5 sm:max-w-[600px] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[var(--container-width)] flex items-center sm:mx-auto justify-between">
+      <div className="mx-5 sm:max-w-[600px] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[var(--container-width)] flex items-center gap-2 sm:mx-auto justify-between">
         <Logo />
         <nav className="hidden md:block">
           <ul className="text-[var(--mainBlack)] flex items-center justify-between gap-6 font-robotoFlex leading-6">
@@ -32,19 +32,23 @@ const Navbar = () => {
         </div>
         <NavButton menuHandler={menuHandler} menuIsOpen={menuIsOpen} />
       </div>
-      {menuIsOpen ? (
-        <nav className="absolute top-[80px] md:hidden bg-[var(--backgroundWhite)]">
-          <ul className="text-[var(--mainBlack)] flex flex-col items-center justify-center gap-6 font-robotoFlex leading-6 w-full h-full">
-            {navList.map((item, index) => (
-              <li key={index}>
-                <Link href="/#" className="hover:opacity-50">
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      ) : null}
+      <nav
+        className={`absolute top-[80px] md:hidden bg-[var(--backgroundWhite)] overflow-hidden w-full transition-all duration-400 ease-linear ${
+          menuIsOpen ? "max-h-screen" : "max-h-0"
+        }`}
+      >
+        <ul className="text-[var(--mainBlack)] flex flex-col items-center font-robotoFlex leading-6 ">
+          {navList.map((item, index) => (
+            <Link
+              key={index}
+              href="/#"
+              className="hover:opacity-50 w-full text-[25px] h-10 text-center mt-10 border-b-2 border-b-[var(--mainBlue)]"
+            >
+              <li>{item}</li>
+            </Link>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 };
