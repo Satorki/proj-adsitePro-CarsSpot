@@ -43,7 +43,7 @@ const Navbar = () => {
         <NavButton menuHandler={menuHandler} menuIsOpen={menuIsOpen} />
       </div>
       <nav
-        className={`absolute top-[80px] md:hidden bg-[var(--backgroundWhite)] overflow-hidden w-full transition-all duration-700 ease-linear ${
+        className={`absolute top-[80px] md:hidden bg-[var(--backgroundWhite)] overflow-hidden w-full transition-all duration-500 ease-linear ${
           menuIsOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
