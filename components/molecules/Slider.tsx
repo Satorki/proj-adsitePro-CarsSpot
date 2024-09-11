@@ -18,7 +18,7 @@ const Slider = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return `<span class="${className} md:-translate-x-12 md:-translate-y-5 translate-x-0 translate-y-0"></span>`;
+      return `<span class="${className} xl:-translate-x-12 xl:-translate-y-5 translate-x-0 translate-y-0 2xl:translate-x-0 2xl:translate-y-0"></span>`;
     },
   };
   //

@@ -14,7 +14,7 @@ const HeroText = () => {
         </p>
       </div>
       <div className="flex gap-6 justify-center sm:justify-normal h-[100px] sm:h-0 ">
-        <CallButton content="Zobacz zdjęcia" />
+        <CallButton content="Zobacz zdjęcia" href="/#gallery" />
         <CallButton
           content="Zadzwoń do nas"
           backgroundColor="var(--backgroundWhite)"

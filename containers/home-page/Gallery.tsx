@@ -4,7 +4,7 @@ import React from "react";
 
 const Gallery = () => {
   return (
-    <div>
+    <div id="gallery">
       <GalleryHeader />
       <div>
         <Slider />
