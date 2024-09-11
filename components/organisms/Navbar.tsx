@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="py-4 sticky top-0">
-      <div className="sm:max-w-[600px] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[var(--container-width)] flex items-center mx-auto justify-between">
+      <div className="mx-5 sm:max-w-[600px] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[var(--container-width)] flex items-center sm:mx-auto justify-between">
         <Logo />
         <nav className="hidden md:block">
           <ul className="text-[var(--mainBlack)] flex items-center justify-between gap-6 font-robotoFlex leading-6">
@@ -27,7 +27,7 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
-        <div className="sm:max-w-max md:w-[150px] w-[300px] flex justify-end">
+        <div className="max-w-max md:w-[150px] w-[300px] flex justify-end">
           <CallButton content="Zadzwoń do nas" />
         </div>
         <NavButton menuHandler={menuHandler} menuIsOpen={menuIsOpen} />
