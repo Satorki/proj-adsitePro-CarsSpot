@@ -8,7 +8,7 @@ const Logo = () => {
   return (
     <div>
       <Link href="/">
-        <div className="md:w-[150px] flex gap-3 w-[300px] h-[29.58px]">
+        <div className="sm:max-w-max md:w-[150px] flex gap-3 w-[300px] h-[29.58px]">
           <Image
             src={LogoSymbol}
             alt="navbar logo symbol"

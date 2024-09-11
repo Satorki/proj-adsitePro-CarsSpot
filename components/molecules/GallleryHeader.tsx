@@ -3,7 +3,7 @@ import React from "react";
 
 const GalleryHeader = () => {
   return (
-    <div className="md:max-w-[700px] lg:max-w-[960px] xl:max-w-[1264px] bg-[var(--backgorundWhite)] mx-auto flex items-end">
+    <div className="sm:max-w-[600px] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[1264px] bg-[var(--backgorundWhite)] mx-auto flex items-end">
       <div className="mt-[80px] flex flex-col gap-6 max-h-[127px] w-[1264px]">
         <div>
           <p className="text-[var(--mainBlue)] font-robotoCondensed text-[21.5px] leading-[32.25px]">

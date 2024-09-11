@@ -7,6 +7,8 @@ import PatterImage from "../../public/images/hero-pattern.png";
 import Square from "@/components/atoms/Square";
 
 const Hero = () => {
+  const isSmallScreen = window.innerWidth < 1024;
+
   return (
     <div>
       <Image
@@ -24,18 +26,33 @@ const Hero = () => {
       />
       <Square />
       <HeroText />
-      <Image
-        src={HeroImage}
-        alt="hero image"
-        width={1065}
-        height={406}
-        style={{
-          position: "absolute",
-          zIndex: -1,
-          right: 0,
-          top: 407,
-        }}
-      />
+
+      {isSmallScreen ? (
+        <Image
+          src={HeroImage}
+          alt="hero image"
+          width={1065}
+          height={406}
+          style={{
+            zIndex: -1,
+            objectFit: "cover",
+          }}
+        />
+      ) : (
+        <Image
+          src={HeroImage}
+          alt="hero image"
+          width={1065}
+          height={406}
+          style={{
+            position: "absolute",
+            zIndex: -1,
+            right: 0,
+            top: 407,
+          }}
+        />
+      )}
+
       <Image
         src={ShadowImge}
         alt="shadow image"

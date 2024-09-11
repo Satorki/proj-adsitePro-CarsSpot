@@ -24,11 +24,11 @@ const Slider = () => {
   //
 
   return (
-    <div className="sm:max-w-[600px] sm:ml-auto sm:mr-auto md:max-w-[700px] md:ml-auto md:mr-auto lg:max-w-[960px] lg:ml-auto lg:mr-auto xl:max-w-none xl:ml-[88px] 2xl:max-w-[1264px] 2xl:ml-auto 2xl:mr-auto pt-20 sm:min-h-[600px] md:min-h-[350px] xl:min-h-[678px]">
+    <div className="sm:max-w-[600px] sm:ml-auto sm:mr-auto md:max-w-[700px] md:ml-auto md:mr-auto lg:max-w-[960px] lg:ml-auto lg:mr-auto xl:max-w-none xl:ml-[88px] 2xl:max-w-[1264px] 2xl:ml-auto 2xl:mr-auto pt-20 sm:min-h-[600px] md:min-h-[400px] lg:min-h-[500px] xl:min-h-[678px] 2xl:min-h-[550px]">
       <Swiper
         pagination={pagination}
         modules={[Navigation, Pagination]}
-        className="mySwiper sm:min-h-[500px]  md:min-h-[350px] xl:min-h-[550px]"
+        className="mySwiper sm:min-h-[500px] md:min-h-[300px]  lg:min-h-[400px]  xl:min-h-[550px] 2xl:min-h-[400px]"
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -44,7 +44,7 @@ const Slider = () => {
           },
           1536: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 20,
           },
         }}
       >
