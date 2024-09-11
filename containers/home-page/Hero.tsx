@@ -22,23 +22,17 @@ const Hero = () => {
         alt="pattern image"
         width={668.05}
         height={659}
-        className="hidden sm:absolute"
+        className="absolute -z-10 top-0 hidden md:block"
         style={{
-          zIndex: -2,
           right: 71.95,
-          top: 0,
         }}
       />
       <Image
         src={PatterImage}
         alt="pattern image"
-        className="sm:hidden"
         fill
-        style={{
-          zIndex: -2,
-        }}
+        className="-z-10 block md:hidden"
       />
-
       <HeroText />
     </div>
   );

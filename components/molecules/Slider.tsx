@@ -18,7 +18,7 @@ const Slider = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return `<span class="${className} -translate-x-12 -translate-y-5 sm:translate-x-0 sm:translate-y-0"></span>`;
+      return `<span class="${className} md:-translate-x-12 md:-translate-y-5 translate-x-0 translate-y-0"></span>`;
     },
   };
   //
@@ -28,8 +28,12 @@ const Slider = () => {
       <Swiper
         pagination={pagination}
         modules={[Navigation, Pagination]}
-        className="mySwiper sm:min-h-[500px] md:min-h-[300px]  lg:min-h-[400px]  xl:min-h-[550px] 2xl:min-h-[400px]"
+        className="mySwiper min-h-[330px] sm:min-h-[500px] md:min-h-[300px]  lg:min-h-[400px]  xl:min-h-[550px] 2xl:min-h-[400px]"
         breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
           640: {
             slidesPerView: 1,
             spaceBetween: 20,

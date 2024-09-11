@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-4 sticky top-0">
+    <div className="py-4 sticky top-0 z-10">
       <div className="mx-5 sm:max-w-[600px] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[var(--container-width)] flex items-center sm:mx-auto justify-between">
         <Logo />
         <nav className="hidden md:block">
@@ -27,7 +27,7 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
-        <div className="max-w-max md:w-[150px] w-[300px] flex justify-end">
+        <div className=" md:w-[150px] lg:w-[300px] flex justify-end">
           <CallButton content="Zadzwoń do nas" />
         </div>
         <NavButton menuHandler={menuHandler} menuIsOpen={menuIsOpen} />
