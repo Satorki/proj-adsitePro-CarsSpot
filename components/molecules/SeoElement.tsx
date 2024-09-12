@@ -9,7 +9,7 @@ interface SeoElementProps {
 
 const SeoElement = ({ title, description, expand }: SeoElementProps) => {
   return (
-    <div className="flex flex-col items-start gap-4">
+    <div className="flex flex-col  items-start gap-4">
       <h3 className="uppercase font-bebasNeue text-[25px] leading-[37.5px] tracking-[-0.03em] text-white">
         {title}
       </h3>

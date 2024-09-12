@@ -1,7 +1,7 @@
 "use client";
 import HeroText from "@/components/molecules/HeroText";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PatterImage from "../../public/images/hero-pattern.png";
 import HeroGroup from "../../public/images/hero-group.png";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -9,7 +9,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const Hero = () => {
   const { scrollY } = useScroll();
   const parallaxEffect = useTransform(scrollY, [0, 500], [0, -100]);
-  const carHide = useTransform(scrollY, [2000, 0], [150, 0]);
+  const carHide = useTransform(scrollY, [500, 0], [150, 0]);
 
   return (
     <div>

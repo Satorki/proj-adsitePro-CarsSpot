@@ -20,13 +20,13 @@ const GalleryHeader = () => {
         </div>
         <div className="flex gap-12">
           <Link
-            href={"/"}
+            href={"/#"}
             className="font-robotoFlex font-semibold text-[15px] leading-[22.5px] tracking-[-0.02em] text-[var(--mainBlue)] border-b border-b-[var(--mainBlue)]"
           >
             Samochody osobowe
           </Link>
           <Link
-            href={"/"}
+            href={"/#"}
             className="hover:border-b hover:border-b-[var(--mainBlue)] hover:text-[var(--mainBlue)] font-robotoFlex text-[15px] leading-[22.5px] tracking-[-0.02em]"
           >
             Samochody dostawcze
