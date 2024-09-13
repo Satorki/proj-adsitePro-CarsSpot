@@ -31,7 +31,10 @@ const Navbar = () => {
           <ul className="text-[var(--mainBlack)] flex items-center justify-between gap-6 font-robotoFlex leading-6">
             {navList.map((item, index) => (
               <li key={index}>
-                <ScrollLink to={item.to} className="hover:opacity-50">
+                <ScrollLink
+                  to={item.to}
+                  className="hover:opacity-50 cursor-pointer"
+                >
                   {item.text}
                 </ScrollLink>
               </li>
@@ -54,7 +57,7 @@ const Navbar = () => {
               to={item.to}
               offset={-79}
               key={index}
-              className="hover:opacity-50 w-full text-[25px] h-10 text-center mt-10 border-b-2 border-b-[var(--mainBlue)]"
+              className="hover:opacity-50 w-full text-[25px] h-10 text-center mt-10 border-b-2 border-b-[var(--mainBlue)] cursor-pointer"
             >
               <li>{item.text}</li>
             </ScrollLink>
