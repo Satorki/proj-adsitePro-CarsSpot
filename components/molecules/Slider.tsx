@@ -4,22 +4,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import Photo from "../atoms/Photo";
+import carPhotos from "../../app/data/carPhotos.json";
+
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogClose,
+  DialogImage,
+  DialogContainer,
+} from "../atoms/ImageFull";
+import { XIcon } from "lucide-react";
 
 interface Props {
   currentGallery: number;
 }
 
 const Slider = ({ currentGallery }: Props) => {
-  const passenger = [
-    "Photo2.png",
-    "Photo1.png",
-    "Photo3.png",
-    "Photo4.jpg",
-    "Photo5.jpg",
-  ];
-
-  const delivery = ["Photo6.jpg", "Photo7.jpg", "Photo8.jpg"];
+  const passengerCarPhotos = carPhotos.passenger;
+  const deliveryCarPhotos = carPhotos.delivery;
 
   const pagination = {
     clickable: true,
@@ -59,14 +62,82 @@ const Slider = ({ currentGallery }: Props) => {
         }}
       >
         {currentGallery === 0
-          ? passenger.map((photoName) => (
-              <SwiperSlide key={photoName}>
-                <Photo photo={`/images/${photoName}`} />
+          ? passengerCarPhotos.map((photoName, index) => (
+              <SwiperSlide key={index}>
+                <Dialog
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <DialogTrigger>
+                    <DialogImage
+                      src={`/images/${photoName.href}`}
+                      alt={photoName.alt}
+                    />
+                  </DialogTrigger>
+                  <DialogContainer>
+                    <DialogContent className="relative">
+                      <DialogImage
+                        src={`/images/${photoName.href}`}
+                        alt={photoName.alt}
+                        className="h-auto w-full max-w-[90vw] rounded-[4px] object-cover lg:h-[90vh]"
+                      />
+                    </DialogContent>
+                    <DialogClose
+                      className="fixed right-6 top-6 h-fit w-fit rounded-full bg-white p-1"
+                      variants={{
+                        initial: { opacity: 0 },
+                        animate: {
+                          opacity: 1,
+                          transition: { delay: 0.3, duration: 0.1 },
+                        },
+                        exit: { opacity: 0, transition: { duration: 0 } },
+                      }}
+                    >
+                      <XIcon className="h-5 w-5 text-zinc-500" />
+                    </DialogClose>
+                  </DialogContainer>
+                </Dialog>
               </SwiperSlide>
             ))
-          : delivery.map((photoName) => (
-              <SwiperSlide key={photoName}>
-                <Photo photo={`/images/${photoName}`} />
+          : deliveryCarPhotos.map((photoName, index) => (
+              <SwiperSlide key={index}>
+                <Dialog
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <DialogTrigger>
+                    <DialogImage
+                      src={`/images/${photoName.href}`}
+                      alt={photoName.alt}
+                    />
+                  </DialogTrigger>
+                  <DialogContainer>
+                    <DialogContent className="relative">
+                      <DialogImage
+                        src={`/images/${photoName.href}`}
+                        alt={photoName.alt}
+                        className="h-auto w-full max-w-[90vw] rounded-[4px] object-cover lg:h-[90vh]"
+                      />
+                    </DialogContent>
+                    <DialogClose
+                      className="fixed right-6 top-6 h-fit w-fit rounded-full bg-white p-1"
+                      variants={{
+                        initial: { opacity: 0 },
+                        animate: {
+                          opacity: 1,
+                          transition: { delay: 0.3, duration: 0.1 },
+                        },
+                        exit: { opacity: 0, transition: { duration: 0 } },
+                      }}
+                    >
+                      <XIcon className="h-5 w-5 text-zinc-500" />
+                    </DialogClose>
+                  </DialogContainer>
+                </Dialog>
               </SwiperSlide>
             ))}
       </Swiper>

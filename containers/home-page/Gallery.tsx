@@ -1,5 +1,5 @@
 "use client";
-import GalleryHeader from "@/components/molecules/GallleryHeader";
+import GalleryHeader from "@/components/molecules/SectionHeader";
 import Slider from "@/components/molecules/Slider";
 import React, { useState } from "react";
 
@@ -11,6 +11,7 @@ const Gallery = () => {
       <GalleryHeader
         setCurrentGallery={setCurrentGallery}
         currentGallery={currentGallery}
+        title="ZOBACZ NASZĄ GALERIĘ ZDJĘĆ"
       />
       <div>
         <Slider currentGallery={currentGallery} />

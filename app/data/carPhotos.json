@@ -1,0 +1,38 @@
+{
+  "passenger": [
+    {
+      "href": "Photo1.png",
+      "alt": "Red alfa romeo car on street"
+    },
+    {
+      "href": "Photo2.png",
+      "alt": "Black Maserati car"
+    },
+    {
+      "href": "Photo3.png",
+      "alt": "Light of black car"
+    },
+    {
+      "href": "Photo4.jpg",
+      "alt": "Street at night"
+    },
+    {
+      "href": "Photo5.jpg",
+      "alt": "Shiny car in garage"
+    }
+  ],
+  "delivery": [
+    {
+      "href": "Photo6.jpg",
+      "alt": "Off-road car in the field "
+    },
+    {
+      "href": "Photo7.jpg",
+      "alt": "Man in car"
+    },
+    {
+      "href": "Photo8.jpg",
+      "alt": "Two off-road cars seen from above"
+    }
+  ]
+}
