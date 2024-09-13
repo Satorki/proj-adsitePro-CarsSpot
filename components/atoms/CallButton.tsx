@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const borderStyle = hasBorder ? "border border-[var(--mainBlue)]" : "";
   return (
-    <ScrollLink to={to} href={href}>
+    <ScrollLink to={to} offset={-79} href={href}>
       <button
         style={{ backgroundColor, color: textColor }}
         className={`${borderStyle} hover:shadow-[0_0_1px_2px_var(--mainBlue)] active:shadow-[0_0_0_1px_2px_var(--mainBlue)] w-[158px] h-[47px] flex justify-center  rounded-[var(--buttons-radius)]

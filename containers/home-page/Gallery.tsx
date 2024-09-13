@@ -1,13 +1,19 @@
+"use client";
 import GalleryHeader from "@/components/molecules/GallleryHeader";
 import Slider from "@/components/molecules/Slider";
-import React from "react";
+import React, { useState } from "react";
 
 const Gallery = () => {
+  const [currentGallery, setCurrentGallery] = useState(0);
+
   return (
     <div id="gallery">
-      <GalleryHeader />
+      <GalleryHeader
+        setCurrentGallery={setCurrentGallery}
+        currentGallery={currentGallery}
+      />
       <div>
-        <Slider />
+        <Slider currentGallery={currentGallery} />
       </div>
     </div>
   );

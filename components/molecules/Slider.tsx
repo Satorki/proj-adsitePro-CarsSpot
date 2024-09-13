@@ -1,12 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import Photo from "../atoms/Photo";
 
-const Slider = () => {
+interface Props {
+  currentGallery: number;
+}
+
+const Slider = ({ currentGallery }: Props) => {
   const passenger = [
     "Photo2.png",
     "Photo1.png",
@@ -15,13 +19,7 @@ const Slider = () => {
     "Photo5.jpg",
   ];
 
-  const delivery = [
-    "Photo6.png",
-    "Photo7.png",
-    "Photo8.png",
-  ];
-
-  
+  const delivery = ["Photo6.jpg", "Photo7.jpg", "Photo8.jpg"];
 
   const pagination = {
     clickable: true,
@@ -60,14 +58,17 @@ const Slider = () => {
           },
         }}
       >
-      
-      {}
-
-        {passenger.map((photoName) => (
-          <SwiperSlide key={photoName}>
-            <Photo photo={`/images/${photoName}`} />
-          </SwiperSlide>
-        ))}
+        {currentGallery === 0
+          ? passenger.map((photoName) => (
+              <SwiperSlide key={photoName}>
+                <Photo photo={`/images/${photoName}`} />
+              </SwiperSlide>
+            ))
+          : delivery.map((photoName) => (
+              <SwiperSlide key={photoName}>
+                <Photo photo={`/images/${photoName}`} />
+              </SwiperSlide>
+            ))}
       </Swiper>
     </div>
   );

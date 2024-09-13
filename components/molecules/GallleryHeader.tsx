@@ -1,7 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
-const GalleryHeader = () => {
+interface Props {
+  setCurrentGallery: (index: number) => void;
+  currentGallery: number;
+}
+
+const GalleryHeader = ({ setCurrentGallery, currentGallery }: Props) => {
   return (
     <div className="mx-5 sm:max-w-[600px] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[1264px] bg-[var(--backgorundWhite)] sm:mx-auto flex items-end">
       <div className="sm:mt-[80px] flex flex-col gap-6 max-h-[127px] w-[1264px]">
@@ -19,18 +24,24 @@ const GalleryHeader = () => {
           </p>
         </div>
         <div className="flex gap-12">
-          <Link
-            href={"/#"}
-            className="font-robotoFlex font-semibold text-[15px] leading-[22.5px] tracking-[-0.02em] text-[var(--mainBlue)] border-b border-b-[var(--mainBlue)]"
+          <button
+            onClick={() => setCurrentGallery(0)}
+            className={`hover:border-b hover:border-b-[var(--mainBlue)] hover:text-[var(--mainBlue)] font-robotoFlex  text-[15px] leading-[22.5px] tracking-[-0.02em]  ${
+              currentGallery === 0 &&
+              "text-[var(--mainBlue)] font-semibold border-b border-b-[var(--mainBlue)]"
+            }`}
           >
             Samochody osobowe
-          </Link>
-          <Link
-            href={"/#"}
-            className="hover:border-b hover:border-b-[var(--mainBlue)] hover:text-[var(--mainBlue)] font-robotoFlex text-[15px] leading-[22.5px] tracking-[-0.02em]"
+          </button>
+          <button
+            onClick={() => setCurrentGallery(1)}
+            className={`hover:border-b hover:border-b-[var(--mainBlue)] hover:text-[var(--mainBlue)] font-robotoFlex text-[15px] leading-[22.5px] tracking-[-0.02em] ${
+              currentGallery === 1 &&
+              "text-[var(--mainBlue)] font-semibold border-b border-b-[var(--mainBlue)]"
+            }`}
           >
             Samochody dostawcze
-          </Link>
+          </button>
         </div>
       </div>
     </div>
