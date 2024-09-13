@@ -7,13 +7,21 @@ import { Navigation, Pagination } from "swiper/modules";
 import Photo from "../atoms/Photo";
 
 const Slider = () => {
-  const photos = [
+  const passenger = [
     "Photo2.png",
     "Photo1.png",
     "Photo3.png",
     "Photo4.jpg",
     "Photo5.jpg",
   ];
+
+  const delivery = [
+    "Photo6.png",
+    "Photo7.png",
+    "Photo8.png",
+  ];
+
+  
 
   const pagination = {
     clickable: true,
@@ -52,7 +60,10 @@ const Slider = () => {
           },
         }}
       >
-        {photos.map((photoName) => (
+      
+      {}
+
+        {passenger.map((photoName) => (
           <SwiperSlide key={photoName}>
             <Photo photo={`/images/${photoName}`} />
           </SwiperSlide>

@@ -5,11 +5,12 @@ import Link from "next/link";
 import { useState } from "react";
 import NavButton from "../atoms/NavButton";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const navList = [
-    { text: "Galeria zdjęć", href: "/#gallery" },
-    { text: "FaQ", href: "/#" },
+    { text: "Galeria zdjęć", to: "gallery" },
+    { text: "FaQ", to: "faq" },
   ];
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const menuHandler = () => {
@@ -30,9 +31,9 @@ const Navbar = () => {
           <ul className="text-[var(--mainBlack)] flex items-center justify-between gap-6 font-robotoFlex leading-6">
             {navList.map((item, index) => (
               <li key={index}>
-                <Link href={item.href} className="hover:opacity-50">
+                <ScrollLink to={item.to} className="hover:opacity-50">
                   {item.text}
-                </Link>
+                </ScrollLink>
               </li>
             ))}
           </ul>
@@ -43,19 +44,20 @@ const Navbar = () => {
         <NavButton menuHandler={menuHandler} menuIsOpen={menuIsOpen} />
       </div>
       <nav
-        className={`absolute top-[80px] md:hidden bg-[var(--backgroundWhite)] overflow-hidden w-full transition-all duration-500 ease-linear ${
+        className={`absolute top-[79px] md:hidden bg-[var(--backgroundWhite)] overflow-hidden w-full transition-all duration-500 ease-linear ${
           menuIsOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
         <ul className="text-[var(--mainBlack)] flex flex-col items-center font-robotoFlex leading-6 ">
           {navList.map((item, index) => (
-            <Link
+            <ScrollLink
+              to={item.to}
+              offset={-79}
               key={index}
-              href={item.href}
               className="hover:opacity-50 w-full text-[25px] h-10 text-center mt-10 border-b-2 border-b-[var(--mainBlue)]"
             >
               <li>{item.text}</li>
-            </Link>
+            </ScrollLink>
           ))}
         </ul>
       </nav>
