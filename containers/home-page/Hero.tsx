@@ -9,13 +9,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const Hero = () => {
   const { scrollY } = useScroll();
   const parallaxEffect = useTransform(scrollY, [0, 500], [0, -100]);
-  const carHide = useTransform(scrollY, [500, 0], [0, 0]);
+  // const carHide = useTransform(scrollY, [0, 500], [0, -500]);
 
   return (
     <div>
-      <motion.div
+      <div
         style={{
-          y: carHide,
           position: "absolute",
           top: 407,
           right: 0,
@@ -23,7 +22,7 @@ const Hero = () => {
         }}
       >
         <Image src={HeroGroup} alt="hero group" />
-      </motion.div>
+      </div>
       <motion.div
         style={{
           y: parallaxEffect,
