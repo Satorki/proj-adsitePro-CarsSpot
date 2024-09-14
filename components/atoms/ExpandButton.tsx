@@ -14,7 +14,7 @@ const ExpandButton = ({ expand, setExpand }: Props) => {
         onClick={() => {
           setExpand(!expand);
         }}
-        className="border-b font-robotoCondensed text-[14px] leading-[21px] flex items-center gap-1 pb-1 hover:pb-2 transition-all duration-300 ease-in-out h-[27px] group"
+        className="border-b font-robotoCondensed text-[14px] leading-[21px] flex items-center gap-1 pb-1 hover:pb-2 transition-all duration-300 ease-in-out group"
       >
         {expand ? "Zwiń" : "Rozwiń"}
         <Image
