@@ -8,8 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
   const { scrollY } = useScroll();
-  const parallaxEffect = useTransform(scrollY, [0, 500], [0, -100]);
-  // const carHide = useTransform(scrollY, [0, 500], [0, -500]);
+  const parallaxEffect = useTransform(scrollY, [0, 700], [0, -200]);
 
   return (
     <div>

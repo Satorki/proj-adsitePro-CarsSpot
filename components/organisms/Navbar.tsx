@@ -1,11 +1,12 @@
 "use client";
 import Logo from "../atoms/Logo";
-import CallButton from "../atoms/CallButton";
+import CallButton from "../atoms/MainButton";
 import Link from "next/link";
 import { useState } from "react";
 import NavButton from "../atoms/NavButton";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
+import PhoneCallButton from "../atoms/PhoneCallButton";
 
 const Navbar = () => {
   const navList = [
@@ -42,7 +43,10 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className=" md:w-[150px] lg:w-[300px] flex justify-end">
-          <CallButton content="Zadzwoń do nas" />
+          <PhoneCallButton
+            content="Zadzwoń do nas"
+            href="tel:+48 123 456 789"
+          />
         </div>
         <NavButton menuHandler={menuHandler} menuIsOpen={menuIsOpen} />
       </div>
@@ -54,6 +58,7 @@ const Navbar = () => {
         <ul className="text-[var(--mainBlack)] flex flex-col items-center font-robotoFlex leading-6 ">
           {navList.map((item, index) => (
             <ScrollLink
+              onClick={() => setMenuIsOpen(false)}
               to={item.to}
               offset={-79}
               key={index}

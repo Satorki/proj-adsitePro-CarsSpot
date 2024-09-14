@@ -1,5 +1,6 @@
 import React from "react";
-import CallButton from "../atoms/CallButton";
+import MainButton from "../atoms/MainButton";
+import PhoneCallButton from "../atoms/PhoneCallButton";
 
 const HeroText = () => {
   return (
@@ -14,12 +15,13 @@ const HeroText = () => {
         </p>
       </div>
       <div className="flex gap-6 justify-center sm:justify-normal h-[100px] sm:h-0 ">
-        <CallButton content="Zobacz zdjęcia" to="gallery" />
-        <CallButton
+        <MainButton content="Zobacz zdjęcia" to="gallery" />
+        <PhoneCallButton
           content="Zadzwoń do nas"
           backgroundColor="var(--backgroundWhite)"
           textColor="var(--mainBlue)"
           hasBorder
+          href="tel:+48123456789"
         />
       </div>
     </div>

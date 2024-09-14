@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { ReactNode } from "react";
-import { Link as ScrollLink } from "react-scroll";
 
 interface ButtonProps {
   content: ReactNode;
@@ -11,17 +10,16 @@ interface ButtonProps {
   to?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const PhoneCallButton: React.FC<ButtonProps> = ({
   content,
   backgroundColor = "var(--mainBlue)",
   textColor = "var(--backgroundWhite)",
   hasBorder = false,
   href = "/#",
-  to = "/",
 }) => {
   const borderStyle = hasBorder ? "border border-[var(--mainBlue)]" : "";
   return (
-    <ScrollLink to={to} offset={-79} href={href}>
+    <Link href={href}>
       <button
         style={{ backgroundColor, color: textColor }}
         className={`${borderStyle} hover:shadow-[0_0_1px_2px_var(--mainBlue)] active:shadow-[0_0_0_1px_2px_var(--mainBlue)] w-[158px] h-[47px] flex justify-center  rounded-[var(--buttons-radius)]
@@ -31,8 +29,8 @@ const Button: React.FC<ButtonProps> = ({
           {content}
         </span>
       </button>
-    </ScrollLink>
+    </Link>
   );
 };
 
-export default Button;
+export default PhoneCallButton;
