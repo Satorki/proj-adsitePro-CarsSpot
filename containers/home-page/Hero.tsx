@@ -7,6 +7,10 @@ import HeroGroup from "../../public/images/hero-group.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
+  console.log(
+    "I hope you enjoyed the site. Have a nice day! Satorki 2024 sebastian.kedzier@gmail.com https://github.com/Satorki"
+  );
+
   const { scrollY } = useScroll();
   const parallaxEffect = useTransform(scrollY, [0, 700], [0, -200]);
 
