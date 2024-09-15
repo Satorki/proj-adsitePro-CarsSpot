@@ -49,7 +49,7 @@ const SeoElement = ({ title, description }: SeoElementProps) => {
           ) : (
             <>
               {description.slice(0, descriptionShortLenght)}
-              <TextEffect per="word" preset="blur" className="inline">
+              <TextEffect per="word" preset="fade" className="inline">
                 {description.slice(descriptionShortLenght)}
               </TextEffect>
             </>
